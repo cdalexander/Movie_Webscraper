@@ -1,0 +1,10 @@
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+.add-movie-heading {
+    font-size: 5em; /* Adjust the font size as needed */
+}
