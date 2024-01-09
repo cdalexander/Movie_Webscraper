@@ -1,10 +1,33 @@
-
 body {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 50vh;
+    /* background-color: blanchedalmond; */
+    background-color: blue;
+    border: coral;
+    margin: 0;
+  }
+
+/* .add-movie-heading {
+font-size: 5em; 
+font-family: 'Rubik Doodle Shadow', sans-serif; 
+} */
+
+/* h1 {
+    font-family: 'Rubik Doodle Shadow', sans-serif;
+} */
+
+.msg {
+    font-size: 2em;
+    /* color: rgb(153, 17, 126); */
+    font-weight: bold;
+
 }
-.add-movie-heading {
-    font-size: 5em; /* Adjust the font size as needed */
+
+#enter-movie {
+    font-size: 5em;
+    background-color: blue;
 }
+
+  

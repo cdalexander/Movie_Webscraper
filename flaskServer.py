@@ -4,7 +4,7 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 
-CORS(app, resources={r"/*": {"origins": "http://127.0.0.1:8080"}})
+CORS(app, resources={r"/*": {"origins": "http://127.0.0.1:5500"}})
 
 movie_data = MovieData()
     
@@ -19,7 +19,7 @@ def get_movie_info():
     movie_budget = movie_data.getMovieBudget(movie_id)
 
     response =  jsonify({'title' : title, 'budget': movie_budget})
-    response.headers.add('Access-Control-Allow-Origin', 'http://127.0.0.1:8080')
+    response.headers.add('Access-Control-Allow-Origin', 'http://127.0.0.1:5500')
     return response
 
 
