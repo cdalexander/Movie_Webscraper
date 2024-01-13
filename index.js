@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Form submitted.");
 
     const title = document.getElementById("title").value;
+    const date = document.getElementById("date").value;
 
     // Make an AJAX request to the Flask server
     fetch("http://127.0.0.1:5000/get_movie_info", {
@@ -28,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ title: title }),
+      body: JSON.stringify({ title: title, date: date }),
     })
       .then((response) => response.json())
       .then((data) => {

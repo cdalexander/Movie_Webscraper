@@ -7,10 +7,12 @@ class MovieData:
     def __init__(self) -> None:
         pass
 
-    def getMovie(self, title) -> int:
+    def getMovie(self, title, year) -> int:
         myMovie = title
+        releaseYear = year
+        print(releaseYear)
         search = tmdb.Search()
-        response = search.movie(query = myMovie)
+        response = search.movie(query = myMovie, year = releaseYear)
         for s in search.results:
             title = s['title']
             id = s['id']
@@ -36,7 +38,10 @@ class MovieData:
 # returnID, returnBudget = getMovieBudget(movieSelection)
 # printStuff(returnID, returnBudget)
 
-
+# yourMovie = input("Enter a movie: ")
+# yourReleaseYear = (input("Enter release year: "))
+# movies = MovieData()
+# movies.getMovie(yourMovie, yourReleaseYear)
 
 
 

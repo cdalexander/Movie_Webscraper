@@ -13,13 +13,14 @@ def get_movie_info():
     print("Request received.")
     data = request.get_json()
     title = data.get('title', '')
+    date = data.get('date', '')
     
 
-    movie_id = movie_data.getMovie(title)
+    movie_id = movie_data.getMovie(title, date)
     movie_budget = movie_data.getMovieBudget(movie_id)
 
     response =  jsonify({'title' : title, 'budget': movie_budget})
-    response.headers.add('Access-Control-Allow-Origin', 'http://127.0.0.1:5500')
+    # response.headers.add('Access-Control-Allow-Origin', 'http://127.0.0.1:5500')
     return response
 
 
